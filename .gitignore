@@ -2,6 +2,13 @@
 node_modules
 /dist
 
+# webpack index entry 运行时代码
+hel_dist
+# npm module normal js 入口文件目录
+hel_proxy
+# npm module esm js 入口文件目录
+hel_proxy_es
+
 
 # local env files
 .env.local

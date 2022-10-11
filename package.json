@@ -1,18 +1,41 @@
 {
-  "name": "hel-tpl-vue3-comp-ts",
+  "name": "hel-tpl-remote-vue3-comps-ts",
+  "appGroupName": "hel-tpl-remote-vue3-comps-ts",
   "version": "0.1.0",
-  "private": true,
+  "main": "hel_proxy/entry.js",
+  "module": "hel_proxy_es/entry.js",
+  "types": "src/entrance/libTypes.ts",
+  "unpkg": "hel_dist/entry.js",
+  "files": [
+    "hel_dist",
+    "hel_proxy",
+    "hel_proxy_es",
+    "scripts",
+    "README.md",
+    "src"
+  ],
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "cross-env PORT=7001 vue-cli-service serve",
+    "build": "npm run check_name && npm run build_dist && npm run build_meta && npm run build_proxy",
+    "build_dist": "vue-cli-service build",
+    "check_name": "node ./scripts/check.js",
+    "build_proxy": "npm run build_proxy_umd && npm run build_proxy_es && cp ./hel_proxy/entry.js ./hel_dist",
+    "build_proxy_umd": "rollup -c",
+    "build_proxy_es": "cross-env BUILD_ENV=es rollup -c",
+    "build_cust": "npm run set_home_page \"npm run build && npm run build_meta\"",
+    "set_home_page": "cross-env-shell HEL_APP_HOME_PAGE=http://127.0.0.1:9001",
+    "build_meta": "node scripts/meta.js",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "vite": "node ./bin/vite"
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "hel-lib-proxy": "^3.9.3",
     "vue": "^3.2.13"
   },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^9.0.1",
     "@types/jest": "^27.0.1",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
@@ -26,13 +49,18 @@
     "@vue/test-utils": "^2.0.0-0",
     "@vue/vue3-jest": "^27.0.0-alpha.1",
     "babel-jest": "^27.0.6",
+    "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-vue": "^8.0.3",
+    "hel-dev-utils": "^2.3.1",
     "jest": "^27.0.5",
+    "rollup": "^2.79.1",
+    "rollup-plugin-terser": "^7.0.2",
     "ts-jest": "^27.0.4",
-    "typescript": "~4.5.5"
+    "typescript": "~4.5.5",
+    "vue-cli-plugin-vite": "~1.5.0"
   }
 }
