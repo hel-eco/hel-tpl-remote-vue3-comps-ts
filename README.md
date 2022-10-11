@@ -21,11 +21,16 @@ npm run publish
 ```
 > 构建是基于webpack构建
 
-## how to make base project
+## how to make project skeleton
+
+```bash
 npm i @vue/cli -g
+
 vue create hel-tpl-remote-vue3-comps-ts --packageManager=npm
+
 cd hel-tpl-remote-vue3-comps-ts
+
 // https://github.com/IndexXuan/vue-cli-plugin-vite
 vue add vite
-
+```
 
