@@ -1,29 +1,31 @@
-# hel-tpl-vue3-comp-ts
+# hel-tpl-remote-vue3-comps-ts
+A simple remote vue3 comp template(typescript、dev with vite or webpack, build with webpack )
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+## desc
+- vite 开发
+```bash
+npm run start:vite
 ```
 
-### Compiles and minifies for production
+- webpack 开发
+```bash
+npm run start
+```
+
+- 打包与发布
+
+**先修改版本号**，在执行打包与发布命令
 ```
 npm run build
+npm run publish
 ```
+> 构建是基于webpack构建
 
-### Run your unit tests
-```
-npm run test:unit
-```
+## how to make base project
+npm i @vue/cli -g
+vue create hel-tpl-remote-vue3-comps-ts --packageManager=npm
+cd hel-tpl-remote-vue3-comps-ts
+// https://github.com/IndexXuan/vue-cli-plugin-vite
+vue add vite
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
