@@ -1,5 +1,5 @@
 # hel-tpl-remote-vue3-comps-ts
-A simple remote vue3 comp template(typescript、dev with vite or webpack, build with webpack )
+A simple remote vue3 comp template(typescript、dev with vite or webpack, build with webpack ), see [online usage](https://codesandbox.io/s/demo-load-remote-vue3-comp-2fd34s?file=/src/main.js)
 
 ## desc
 - vite 开发
