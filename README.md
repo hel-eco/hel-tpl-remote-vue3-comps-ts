@@ -17,7 +17,7 @@ npm run start
 **先修改版本号**，在执行打包与发布命令
 ```
 npm run build
-npm run publish
+npm publish
 ```
 > 构建是基于webpack构建
 
