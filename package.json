@@ -27,7 +27,8 @@
     "set_home_page": "cross-env-shell HEL_APP_HOME_PAGE=http://127.0.0.1:9001",
     "build_meta": "node scripts/meta.js",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "prepublishOnly": "node ./scripts/prepublishOnly.js"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -49,6 +50,7 @@
     "@vue/test-utils": "^2.0.0-0",
     "@vue/vue3-jest": "^27.0.0-alpha.1",
     "babel-jest": "^27.0.6",
+    "chalk": "4.0.0",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.25.3",

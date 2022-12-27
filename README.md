@@ -1,5 +1,5 @@
 # hel-tpl-remote-vue3-comps-ts
-A simple remote vue3 comp template(typescript、dev with vite or webpack, build with webpack )
+A simple remote vue3 comp template(typescript、dev with vite or webpack, build with webpack ), see [online usage](https://codesandbox.io/s/demo-load-remote-vue3-comp-2fd34s?file=/src/main.js)
 
 ## desc
 - vite 开发
@@ -14,10 +14,10 @@ npm run start
 
 - 打包与发布
 
-**先修改版本号**，在执行打包与发布命令
+**先修改版本号**，再执行打包与发布命令（这点很重要，顺序不能弄反为：先构建再修改版本号）
 ```
 npm run build
-npm run publish
+npm publish
 ```
 > 构建是基于webpack构建
 
