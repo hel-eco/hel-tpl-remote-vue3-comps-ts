@@ -1,7 +1,7 @@
 {
   "name": "hel-tpl-remote-vue3-comps-ts",
   "appGroupName": "hel-tpl-remote-vue3-comps-ts",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "main": "hel_proxy/entry.js",
   "module": "hel_proxy_es/entry.js",
   "types": "src/entrance/libTypes.ts",
@@ -32,14 +32,14 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "hel-iso": "^4.1.0",
-    "hel-lib-proxy": "^4.5.1",
+    "hel-iso": "^4.3.2",
+    "hel-lib-proxy": "^4.7.0",
     "vue": "^3.2.13"
   },
   "peerDependencies": {
     "core-js": "^3.8.3",
-    "hel-iso": "^4.1.0",
-    "hel-lib-proxy": "^4.5.1",
+    "hel-iso": "^4.3.2",
+    "hel-lib-proxy": "^4.7.0",
     "vue": "^3.2.13"
   },
   "devDependencies": {
@@ -64,7 +64,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-vue": "^8.0.3",
-    "hel-dev-utils": "^4.2.5",
+    "hel-dev-utils": "^4.3.11",
     "jest": "^27.0.5",
     "rollup": "^2.79.1",
     "rollup-plugin-terser": "^7.0.2",
